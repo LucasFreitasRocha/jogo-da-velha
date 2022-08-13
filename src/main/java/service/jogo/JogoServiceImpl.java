@@ -77,9 +77,9 @@ public class JogoServiceImpl implements JogoServiceInterface{
     private void  buildTentavia(int jogador,int[]  tentativa){
         do{
             System.out.println("Escolha uma linha entre 1 e 3");
-            tentativa[0] = Integer. valueOf(entrada.nextLine()) - 1;
+            tentativa[0] = Integer. valueOf(entrada.nextLine().trim()) - 1;
             System.out.println("Escolha uma coluna entre 1 e 3");
-            tentativa[1] = Integer. valueOf(entrada.nextLine()) - 1;
+            tentativa[1] = Integer.valueOf(entrada.nextLine().trim()) - 1;
         }while (!jogadores.get(jogador).verificarTentativa(tentativa));
 
     }
